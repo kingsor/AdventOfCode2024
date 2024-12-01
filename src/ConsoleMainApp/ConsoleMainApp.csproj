@@ -24,7 +24,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="data\day1\" />
         <Folder Include="data\day2\" />
     </ItemGroup>
 

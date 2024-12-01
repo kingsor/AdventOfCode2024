@@ -21,7 +21,7 @@ public class PuzzleSolverDay1 : IPuzzleSolver
             SolvePuzzleOne("./data/day1/input1.txt");
         }
 
-        SolvePuzzleTwo("./data/day1/test2.txt");
+        SolvePuzzleTwo("./data/day1/test1.txt");
 
         SolvePuzzleTwo("./data/day1/input1.txt");
     }
@@ -34,7 +34,35 @@ public class PuzzleSolverDay1 : IPuzzleSolver
 
         if (File.Exists(inputFile))
         {
-            // Solve puzzle
+            var lines = File.ReadAllLines(inputFile);
+            var leftList = new List<int>();
+            var rightList = new List<int>();
+            var totDistance = 0;
+
+            foreach (var line in lines)
+            {
+                var nums = line.Split("   ");
+
+                leftList.Add(Convert.ToInt32(nums[0]));
+                rightList.Add(Convert.ToInt32(nums[1]));
+            }
+
+            var listLen = leftList.Count;
+
+            for (int idx = 0; idx < listLen; idx++)
+            {
+                var leftMin = leftList.Min();
+                var rightMin = rightList.Min();
+                var distance = Math.Abs(leftMin - rightMin);
+
+                _logger.LogInformation($"Current distance [{idx}]: {distance}");
+
+                totDistance += distance;
+                leftList.Remove(leftMin);
+                rightList.Remove(rightMin);
+            }
+
+            _logger.LogInformation($"Total distance: {totDistance}");
         }
         else
         {
@@ -50,7 +78,31 @@ public class PuzzleSolverDay1 : IPuzzleSolver
 
         if (File.Exists(inputFile))
         {
-            // Solve Puzzle
+            var lines = File.ReadAllLines(inputFile);
+            var leftList = new List<int>();
+            var rightList = new List<int>();
+            var totScore = 0;
+
+            foreach (var line in lines)
+            {
+                var nums = line.Split("   ");
+
+                leftList.Add(Convert.ToInt32(nums[0]));
+                rightList.Add(Convert.ToInt32(nums[1]));
+            }
+
+            foreach(var num in leftList)
+            {
+                var numTimes = rightList.Count(r => r == num);
+
+                var score = num * numTimes;
+
+                _logger.LogInformation($"Similarity score for [{num}]: {score}");
+
+                totScore += score;
+            }
+
+            _logger.LogInformation($"Total similarity score: {totScore}");
         }
         else
         {
