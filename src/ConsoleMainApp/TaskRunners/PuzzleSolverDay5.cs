@@ -15,17 +15,13 @@ public class PuzzleSolverDay5 : IPuzzleSolver
     {
         if (solveFirst)
         {
-            SolvePuzzleOne("./data/day5/test1.txt");
+            SolvePuzzles("./data/day5/test1.txt");
 
-            SolvePuzzleOne("./data/day5/input1.txt");
+            SolvePuzzles("./data/day5/input1.txt");
         }
-
-        SolvePuzzleTwo("./data/day5/test2.txt");
-
-        SolvePuzzleTwo("./data/day5/input2.txt");
     }
 
-    private void SolvePuzzleOne(string inputFile)
+    private void SolvePuzzles(string inputFile)
     {
         _logger.LogInformation("Solving puzzle one");
 
@@ -143,19 +139,4 @@ public class PuzzleSolverDay5 : IPuzzleSolver
         return isRightOrder;
     }
 
-    private void SolvePuzzleTwo(string inputFile)
-    {
-        _logger.LogInformation("Solving puzzle two");
-
-        _logger.LogInformation($"Input file: {inputFile}");
-
-        if (File.Exists(inputFile))
-        {
-            // solve puzzle
-        }
-        else
-        {
-            _logger.LogError("File not found");
-        }
-    }
 }
