@@ -19,7 +19,7 @@ internal class Program
 
         var taskRunner = host.Services.GetRequiredService<TaskRunner>();
 
-        var dayNumber = 8;
+        var dayNumber = 9;
 
         taskRunner.RunSolver(dayNumber);
 
