@@ -3,11 +3,11 @@ using System.Text.RegularExpressions;
 
 namespace ConsoleMainApp.TaskRunners;
 
-public class PuzzleSolverDay3 : IPuzzleSolver
+public class PuzzleSolverDay03 : IPuzzleSolver
 {
-    private readonly ILogger<PuzzleSolverDay3> _logger;
+    private readonly ILogger<PuzzleSolverDay03> _logger;
 
-    public PuzzleSolverDay3(ILogger<PuzzleSolverDay3> logger)
+    public PuzzleSolverDay03(ILogger<PuzzleSolverDay03> logger)
     {
         _logger = logger;
     }

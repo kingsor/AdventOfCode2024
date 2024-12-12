@@ -4,11 +4,11 @@ using System.Drawing;
 
 namespace ConsoleMainApp.TaskRunners;
 
-internal class PuzzleSolverDay8 : IPuzzleSolver
+internal class PuzzleSolverDay08 : IPuzzleSolver
 {
-    private readonly ILogger<PuzzleSolverDay8> _logger;
+    private readonly ILogger<PuzzleSolverDay08> _logger;
 
-    public PuzzleSolverDay8(ILogger<PuzzleSolverDay8> logger)
+    public PuzzleSolverDay08(ILogger<PuzzleSolverDay08> logger)
     {
         _logger = logger;
     }

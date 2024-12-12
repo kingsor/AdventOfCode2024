@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ConsoleMainApp.TaskRunners
 {
-    public class PuzzleSolverDay2 : IPuzzleSolver
+    public class PuzzleSolverDay02 : IPuzzleSolver
     {
-        private readonly ILogger<PuzzleSolverDay2> _logger;
+        private readonly ILogger<PuzzleSolverDay02> _logger;
 
-        public PuzzleSolverDay2(ILogger<PuzzleSolverDay2> logger)
+        public PuzzleSolverDay02(ILogger<PuzzleSolverDay02> logger)
         {
             _logger = logger;
         }

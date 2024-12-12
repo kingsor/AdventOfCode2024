@@ -3,11 +3,11 @@ using Microsoft.Extensions.Logging;
 
 namespace ConsoleMainApp.TaskRunners;
 
-public class PuzzleSolverDay9 : IPuzzleSolver
+public class PuzzleSolverDay09 : IPuzzleSolver
 {
-    private readonly ILogger<PuzzleSolverDay9> _logger;
+    private readonly ILogger<PuzzleSolverDay09> _logger;
 
-    public PuzzleSolverDay9(ILogger<PuzzleSolverDay9> logger)
+    public PuzzleSolverDay09(ILogger<PuzzleSolverDay09> logger)
     {
         _logger = logger;
     }

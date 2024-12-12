@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleMainApp.TaskRunners
 {
-    internal class PuzzleSolverDay7 : IPuzzleSolver
+    internal class PuzzleSolverDay07 : IPuzzleSolver
     {
-        private readonly ILogger<PuzzleSolverDay7> _logger;
+        private readonly ILogger<PuzzleSolverDay07> _logger;
 
-        public PuzzleSolverDay7(ILogger<PuzzleSolverDay7> logger)
+        public PuzzleSolverDay07(ILogger<PuzzleSolverDay07> logger)
         {
             _logger = logger;
         }

@@ -2,11 +2,11 @@
 
 namespace ConsoleMainApp.TaskRunners;
 
-public class PuzzleSolverDay5 : IPuzzleSolver
+public class PuzzleSolverDay05 : IPuzzleSolver
 {
-    private readonly ILogger<PuzzleSolverDay5> _logger;
+    private readonly ILogger<PuzzleSolverDay05> _logger;
 
-    public PuzzleSolverDay5(ILogger<PuzzleSolverDay5> logger)
+    public PuzzleSolverDay05(ILogger<PuzzleSolverDay05> logger)
     {
         _logger = logger;
     }

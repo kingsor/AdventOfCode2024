@@ -14,12 +14,12 @@ static class Direction
     public const byte Obstacle = (byte)'#';
 }
 
-public class PuzzleSolverDay6 : IPuzzleSolver
+public class PuzzleSolverDay06 : IPuzzleSolver
 {
 
-    private readonly ILogger<PuzzleSolverDay6> _logger;
+    private readonly ILogger<PuzzleSolverDay06> _logger;
 
-    public PuzzleSolverDay6(ILogger<PuzzleSolverDay6> logger)
+    public PuzzleSolverDay06(ILogger<PuzzleSolverDay06> logger)
     {
         _logger = logger;
     }

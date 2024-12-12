@@ -1,21 +1,14 @@
 ﻿using ConsoleMainApp.Helpers;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using static System.Formats.Asn1.AsnWriter;
 
 namespace ConsoleMainApp.TaskRunners;
 
-public class PuzzleSolverDay4 : IPuzzleSolver
+public class PuzzleSolverDay04 : IPuzzleSolver
 {
-    private readonly ILogger<PuzzleSolverDay4> _logger;
+    private readonly ILogger<PuzzleSolverDay04> _logger;
 
-    public PuzzleSolverDay4(ILogger<PuzzleSolverDay4> logger)
+    public PuzzleSolverDay04(ILogger<PuzzleSolverDay04> logger)
     {
         _logger = logger;
     }

@@ -18,13 +18,13 @@ public class TaskRunner
         ArgumentOutOfRangeException.ThrowIfLessThan(dayNumber, 1);
         ArgumentOutOfRangeException.ThrowIfGreaterThan(dayNumber, 24);
 
-        _logger.LogInformation($"Finding a puzzle solver for day {dayNumber}");
+        _logger.LogInformation($"Finding a puzzle solver for day {dayNumber:00}");
 
         IPuzzleSolver solver = GetPuzzleSolver(dayNumber);
 
         if (solver != null)
         {
-            _logger.LogInformation($"Running the puzzle solver for day {dayNumber}");
+            _logger.LogInformation($"Running the puzzle solver for day {dayNumber:00}");
 
             solver.Run();
         }
@@ -32,7 +32,7 @@ public class TaskRunner
 
     private IPuzzleSolver GetPuzzleSolver(int dayNumber)
     {
-        var typeName = $"ConsoleMainApp.TaskRunners.PuzzleSolverDay{dayNumber}";
+        var typeName = $"ConsoleMainApp.TaskRunners.PuzzleSolverDay{dayNumber:00}";
 
         var solverType = Type.GetType(typeName);
 
