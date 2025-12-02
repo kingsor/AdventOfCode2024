@@ -20,7 +20,7 @@ public class TaskRunner
 
         _logger.LogInformation($"Finding a puzzle solver for day {dayNumber:00}");
 
-        IPuzzleSolver solver = GetPuzzleSolver(dayNumber);
+        var solver = GetPuzzleSolver(dayNumber);
 
         if (solver != null)
         {
@@ -30,7 +30,7 @@ public class TaskRunner
         }
     }
 
-    private IPuzzleSolver GetPuzzleSolver(int dayNumber)
+    private IPuzzleSolver? GetPuzzleSolver(int dayNumber)
     {
         var typeName = $"ConsoleMainApp.TaskRunners.PuzzleSolverDay{dayNumber:00}";
 
@@ -38,6 +38,6 @@ public class TaskRunner
 
         var solverInstance = _serviceProvider.GetService(solverType);
 
-        return (IPuzzleSolver)solverInstance;
+        return solverInstance as IPuzzleSolver;
     }
 }

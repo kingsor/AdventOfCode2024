@@ -13,14 +13,11 @@ internal class PuzzleSolverDay08 : IPuzzleSolver
         _logger = logger;
     }
 
-    public void Run(bool solveFirst = true)
+    public void Run()
     {
-        if (solveFirst)
-        {
-            SolvePuzzle("./data/day8/test1.txt");
+        SolvePuzzle("./data/day08/test1.txt");
 
-            SolvePuzzle("./data/day8/input1.txt");
-        }
+        SolvePuzzle("./data/day08/input1.txt");
     }
 
     private void SolvePuzzle(string inputFile)

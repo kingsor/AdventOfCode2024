@@ -1,24 +1,29 @@
 ﻿using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ConsoleMainApp.TaskRunners
 {
-    internal class PuzzleSolverDay11 : IPuzzleSolver
+    internal class PuzzleSolverDay12 : IPuzzleSolver
     {
-        private readonly ILogger<PuzzleSolverDay11> _logger;
+        private readonly ILogger<PuzzleSolverDay12> _logger;
 
-        public PuzzleSolverDay11(ILogger<PuzzleSolverDay11> logger)
+        public PuzzleSolverDay12(ILogger<PuzzleSolverDay12> logger)
         {
             _logger = logger;
         }
 
         public void Run()
         {
-            SolvePuzzle("./data/day11/test1.txt");
+            SolvePuzzles("./data/day12/test1.txt");
 
-            SolvePuzzle("./data/day11/input1.txt");
+            SolvePuzzles("./data/day12/input1.txt");
         }
 
-        private void SolvePuzzle(string inputFile)
+        private void SolvePuzzles(string inputFile)
         {
             _logger.LogInformation("Solving puzzle one");
 
@@ -33,6 +38,5 @@ namespace ConsoleMainApp.TaskRunners
                 _logger.LogError("File not found");
             }
         }
-        
     }
 }

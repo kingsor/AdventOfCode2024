@@ -11,17 +11,14 @@ public class PuzzleSolverDay05 : IPuzzleSolver
         _logger = logger;
     }
 
-    public void Run(bool solveFirst = true)
+    public void Run()
     {
-        if (solveFirst)
-        {
-            SolvePuzzles("./data/day5/test1.txt");
+        SolvePuzzle("./data/day05/test1.txt");
 
-            SolvePuzzles("./data/day5/input1.txt");
-        }
+        SolvePuzzle("./data/day05/input1.txt");
     }
 
-    private void SolvePuzzles(string inputFile)
+    private void SolvePuzzle(string inputFile)
     {
         _logger.LogInformation("Solving puzzle one");
 

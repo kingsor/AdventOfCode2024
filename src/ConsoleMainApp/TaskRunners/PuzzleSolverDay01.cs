@@ -1,5 +1,4 @@
-﻿using ConsoleMainApp.Extensions;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
 namespace ConsoleMainApp.TaskRunners;
 
@@ -12,18 +11,15 @@ public class PuzzleSolverDay01 : IPuzzleSolver
         _logger = logger;
     }
 
-    public void Run(bool solveFirst = true)
+    public void Run()
     {
-        if (solveFirst)
-        {
-            SolvePuzzleOne("./data/day1/test1.txt");
+        SolvePuzzleOne("./data/day01/test1.txt");
 
-            SolvePuzzleOne("./data/day1/input1.txt");
-        }
+        SolvePuzzleOne("./data/day01/input1.txt");
 
-        SolvePuzzleTwo("./data/day1/test1.txt");
+        SolvePuzzleTwo("./data/day01/test1.txt");
 
-        SolvePuzzleTwo("./data/day1/input1.txt");
+        SolvePuzzleTwo("./data/day01/input1.txt");
     }
 
     private void SolvePuzzleOne(string inputFile)

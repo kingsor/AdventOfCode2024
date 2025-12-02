@@ -2,6 +2,6 @@
 {
     public interface IPuzzleSolver
     {
-        void Run(bool solveFirst = true);
+        void Run();
     }
 }

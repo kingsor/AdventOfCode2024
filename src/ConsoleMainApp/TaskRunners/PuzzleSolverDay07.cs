@@ -1,9 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleMainApp.TaskRunners
 {
@@ -16,14 +11,11 @@ namespace ConsoleMainApp.TaskRunners
             _logger = logger;
         }
 
-        public void Run(bool solveFirst = true)
+        public void Run()
         {
-            if (solveFirst)
-            {
-                SolvePuzzle("./data/day7/test1.txt");
+            SolvePuzzle("./data/day07/test1.txt");
 
-                SolvePuzzle("./data/day7/input1.txt");
-            }
+            SolvePuzzle("./data/day07/input1.txt");
         }
 
         internal class PuzzleItem
